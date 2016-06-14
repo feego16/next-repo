@@ -1,25 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="anotherone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redfish-md" translatesAutoresizingMaskIntoConstraints="NO" id="HHt-Rf-HNi">
+                                <rect key="frame" x="20" y="28" width="120" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fishing-blue-fish-clipart" translatesAutoresizingMaskIntoConstraints="NO" id="8ls-MZ-7NZ">
+                                <rect key="frame" x="169" y="28" width="131" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5w-A4-h7Y">
+                                <rect key="frame" x="74" y="269" width="179" height="30"/>
+                                <state key="normal" title="Red Button">
+                                    <color key="titleColor" red="0.93659234046936035" green="0.24010547995567322" blue="0.1005440279841423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeredhide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fuT-DY-F6b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74d-C0-pfY">
+                                <rect key="frame" x="79" y="307" width="162" height="30"/>
+                                <state key="normal" title="Blue Button"/>
+                                <connections>
+                                    <action selector="makebluehide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZCf-Ti-hiE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Meo-H8-8Nz">
+                                <rect key="frame" x="85" y="415" width="151" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.94695144891738892" green="0.93580597639083862" blue="0.19533765316009521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeredandblueappear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKU-D3-cib"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="underwater-images-23" translatesAutoresizingMaskIntoConstraints="NO" id="Fkq-jJ-lxc">
+                                <rect key="frame" x="-298" y="-35" width="682" height="938"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bluefish" destination="8ls-MZ-7NZ" id="1I8-aK-FoU"/>
+                        <outlet property="redfish" destination="HHt-Rf-HNi" id="bcJ-wD-kLm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="341" y="273"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Fishing-blue-fish-clipart" width="6805" height="4431"/>
+        <image name="redfish-md" width="297" height="228"/>
+        <image name="underwater-images-23" width="1920" height="1080"/>
+    </resources>
 </document>
